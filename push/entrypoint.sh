@@ -17,3 +17,4 @@ else
 fi
 
 docker push $GCLOUD_REGISTRY/$IMAGE
+docker push $GCLOUD_REGISTRY/$IMAGE:latest
