@@ -7,7 +7,7 @@ set -e
 : ${TAG:=$GITHUB_SHA}
 : ${DEFAULT_BRANCH_TAG:=true}
 
-docker build -t $IMAGE:$TAG .
+docker build -t $IMAGE:latest -t $IMAGE:$TAG .
 docker tag $IMAGE:$TAG $GCLOUD_REGISTRY/$IMAGE:$TAG
 if [ "$DEFAULT_BRANCH_TAG" = "true" ]; then
   BRANCH=$(echo $GITHUB_REF | rev | cut -f 1 -d / | rev)
