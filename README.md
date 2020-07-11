@@ -72,13 +72,14 @@ jobs:
 
 ### Build
 
-| parameter | description                       | required | default              |
-| --------- | --------------------------------- | -------- | -------------------- |
-| registry  | The registry to upload to.        | false    | gcr.io               |
-| image     | The name of image to build.       | false    | `$GITHUB_REPOSITORY` |
-| tag       | The tag of the image.             | false    | `$GITHUB_SHA`        |
-| latest    | If true, will also add latest tag | true     | `true`               |
-| args      | Additional args for docker        | false    |                      |
+| parameter  | description                       | required | default              |
+| ---------  | --------------------------------- | -------- | -------------------- |
+| registry   | The registry to upload to.        | false    | gcr.io               |
+| image      | The name of image to build.       | false    | `$GITHUB_REPOSITORY` |
+| tag        | The tag of the image.             | false    | `$GITHUB_SHA`        |
+| latest     | If true, will also add latest tag | true     | `true`               |
+| args       | Additional args for docker        | false    |                      |
+| dockerfile | The Dockerfile to use             | false    | Dockerfile           |
 
 ### Push
 

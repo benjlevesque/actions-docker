@@ -25,6 +25,10 @@ inputs:
     description: the context path
     required: true
     default: "."
+  dockerfile:
+    description: the Dockerfile to use
+    required: false
+    default: "Dockerfile"
 
 runs: 
   using: 'docker'
